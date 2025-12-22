@@ -1,20 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inicio
+      Inicio - Diagnóstico
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
 
-  <ion-button IonRouterLink="/alert"> 
+  <ion-button (click)="goToAlert()" color="secondary"> 
     Ir a Alert 
   </ion-button>
 
-  <ion-button IonRouterLink="/action-sheet" > 
+  <ion-button (click)="goToActionSheet()" color="secondary"> 
     Ir a Action Sheet 
   </ion-button>
-  
+
 </ion-content>
- 

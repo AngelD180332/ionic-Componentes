@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonRouterLink } from '@ionic/angular/standalone';
-import { RouterLinkActive } from "@angular/router";
+import { RouterLinkActive, Router } from "@angular/router";
 
 @Component({
   selector: 'app-inicio',
@@ -17,5 +17,28 @@ import { RouterLinkActive } from "@angular/router";
   ],
 })
 export class inicioPage {
-  constructor() {}
+  constructor(private router: Router) {}
+
+  // Método para probar que el botón funciona
+  testClick() {
+    console.log('¡El botón funciona!');
+    alert('¡El botón funciona!');
+  }
+
+  // Método para navegar programáticamente
+  goToAlert() {
+    console.log('Intentando navegar a /alert');
+    this.router.navigate(['/alert']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
+
+  goToActionSheet() {
+    console.log('Intentando navegar a /action-sheet');
+    this.router.navigate(['/action-sheet']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
 }
