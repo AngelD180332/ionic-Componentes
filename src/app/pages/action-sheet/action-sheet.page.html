@@ -1,9 +1,11 @@
-<ion-header [translucent]="true">
+<!--<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-back-button slot="start" (click)="goBack()" defaultHref="/inicio"></ion-back-button>
-    <ion-title>Action Sheet</ion-title>
+    <ion-back-button slot="start" (click)="goBack()" defaultHref="/"></ion-back-button>
+    <ion-title>Regresar</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+
+<app-header></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
@@ -19,8 +21,5 @@
     Volver a Inicio
   </ion-button>
 
-  <ion-button (click)="goBack()" color="secondary" expand="block">
-    Regresar (historial)
-  </ion-button>
 
 </ion-content>
