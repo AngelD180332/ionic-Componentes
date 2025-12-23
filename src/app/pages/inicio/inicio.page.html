@@ -17,6 +17,10 @@
   </ion-button>
 -->
   <ion-list>
-    <ion-item>Hola mundo </ion-item>
+    <ion-item *ngFor="let c of componentes">
+      <ion-icon name="bulb-outline"></ion-icon>
+      {{c.name}}    
+    </ion-item>
   </ion-list>
 </ion-content>
+

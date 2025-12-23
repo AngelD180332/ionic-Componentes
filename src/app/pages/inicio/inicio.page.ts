@@ -1,23 +1,52 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonRouterLink } from '@ionic/angular/standalone';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { 
+  IonHeader, 
+  IonToolbar, 
+  IonTitle, 
+  IonContent, 
+  IonButton, 
+  IonRouterLink,
+  IonList,
+  IonItem,
+  IonIcon
+} from '@ionic/angular/standalone';
 import { RouterLinkActive, Router } from "@angular/router";
+import { addIcons } from 'ionicons';
+import { bulbOutline } from 'ionicons/icons';
+
+interface Componente {
+  icon: string;
+  name: string;
+  redirectTo: string;
+}
 
 @Component({
   selector: 'app-inicio',
   templateUrl: 'inicio.page.html',
   styleUrls: ['inicio.page.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],  // ← AGREGAR ESTO
   imports: [
+    CommonModule,
     IonHeader, 
     IonToolbar, 
     IonTitle, 
     IonContent, 
     IonButton,
     IonRouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    IonList,
+    IonItem
+    // IonIcon no es necesario con CUSTOM_ELEMENTS_SCHEMA
   ],
 })
 export class inicioPage {
   constructor(private router: Router) {}
+
+  componentes: Componente[] = [
+    { icon: 'alert-circle-outline', name: 'Alert', redirectTo: '/alert' },
+    { icon: 'albums-outline', name: 'Action Sheet', redirectTo: '/action-sheet' },
+  ];
 
   // Método para probar que el botón funciona
   testClick() {
