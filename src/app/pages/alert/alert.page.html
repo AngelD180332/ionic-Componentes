@@ -1,9 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-back-button slot="start" (click)="goBack()" defaultHref="/"></ion-back-button>
-    <ion-title>Regresar</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header [titulo]="'Alert'"></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
@@ -13,12 +8,10 @@
   </ion-header>
 
   <h2>Página de Alert</h2>
-  <p>Aquí puedes agregar tu contenido de alertas</p>
+  <p>Aquí puedes agregar tu contenido de alert</p>
 
-  <ion-button (click)="goToInicio()" color="primary" expand="block">
+  <!-- <ion-button (click)="goToInicio()" color="primary" expand="block">
     Volver a Inicio
   </ion-button>
-
- 
-
+  -->
 </ion-content>

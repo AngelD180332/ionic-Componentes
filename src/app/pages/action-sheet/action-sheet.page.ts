@@ -1,16 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonBackButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import { ComponentsModule } from "src/app/components/components-module";
+import { HeaderComponent } from "../../components/header/header.component"; // ← Importar directamente
 
 @Component({
   selector: 'app-action-sheet',
   templateUrl: './action-sheet.page.html',
   styleUrls: ['./action-sheet.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonBackButton, CommonModule, FormsModule, ComponentsModule]
+  imports: [
+    IonContent, 
+    IonHeader, 
+    IonTitle, 
+    IonToolbar, 
+    IonButton, 
+    CommonModule, 
+    FormsModule, 
+    HeaderComponent // ← Agregar aquí
+  ]
 })
 export class ActionSheetPage implements OnInit {
 
