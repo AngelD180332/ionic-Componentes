@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonBackButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import { HeaderComponent } from "../../components/header/header.component"; 
+import { HeaderComponent } from "../../components/header/header.component"; // ← Importar directamente
 
 @Component({
   selector: 'app-alert',

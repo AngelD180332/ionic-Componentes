@@ -19,6 +19,7 @@ import { HeaderComponent } from "../../components/header/header.component"; // �
     CommonModule, 
     FormsModule, 
     HeaderComponent // ← Agregar aquí
+
   ]
 })
 export class ActionSheetPage implements OnInit {
