@@ -6,12 +6,13 @@
       <ion-title size="large">Alert</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <h2>Página de Alert</h2>
-  <p>Aquí puedes agregar tu contenido de alert</p>
-
-  <!-- <ion-button (click)="goToInicio()" color="primary" expand="block">
-    Volver a Inicio
+  <ion-button (click)="presentAlert()" color="secondary" expand="block">
+    Mostrar Alert
   </ion-button>
-  -->
+  <ion-button (click)="presentAlertMultiple()" color="tertiary" expand="block">
+    Alert con múltiples botones  
+  </ion-button>
+   <ion-button (click)="presentAlertPrompt()" expand="block">
+    Present Prompt Alert  
+  </ion-button>
 </ion-content>

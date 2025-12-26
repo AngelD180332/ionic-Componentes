@@ -13,7 +13,7 @@ import {
 } from '@ionic/angular/standalone';
 import { RouterLinkActive, Router } from "@angular/router";
 import { addIcons } from 'ionicons';
-import { bulbOutline } from 'ionicons/icons';
+import { alertCircleOutline, albumsOutline } from 'ionicons/icons';
 
 interface Componente {
   icon: string;
@@ -25,7 +25,7 @@ interface Componente {
   selector: 'app-inicio',
   templateUrl: 'inicio.page.html',
   styleUrls: ['inicio.page.scss'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],  // ← AGREGAR ESTO
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
     IonHeader, 
@@ -37,16 +37,19 @@ interface Componente {
     RouterLinkActive,
     IonList,
     IonItem
-    // IonIcon no es necesario con CUSTOM_ELEMENTS_SCHEMA
   ],
 })
 export class inicioPage {
-  constructor(private router: Router) {}
-
   componentes: Componente[] = [
     { icon: 'alert-circle-outline', name: 'Alert', redirectTo: '/alert' },
     { icon: 'albums-outline', name: 'Action Sheet', redirectTo: '/action-sheet' },
+    { icon: 'person-circle-outline', name: 'Avatar', redirectTo: '/avatar' },
   ];
+
+  constructor(private router: Router) {
+    // Registrar todos los iconos que se usarán
+    addIcons({ alertCircleOutline, albumsOutline });
+  }
 
   // Método para probar que el botón funciona
   testClick() {
@@ -69,5 +72,18 @@ export class inicioPage {
       success => console.log('Navegación exitosa:', success),
       error => console.error('Error de navegación:', error)
     );
+  }
+  goToAvatar() {
+    console.log('Intentando navegar a /avatar');
+    this.router.navigate(['/avatar']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
+
+  // Método genérico para navegar
+  navigateTo(route: string) {
+    console.log('Navegando a:', route);
+    this.router.navigate([route]);
   }
 }

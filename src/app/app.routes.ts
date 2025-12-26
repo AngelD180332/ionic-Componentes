@@ -16,6 +16,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/action-sheet/action-sheet.page').then( m => m.ActionSheetPage)
   },
   {
+    path: 'avatar',
+    loadComponent: () => import('./pages/avatar/avatar.page').then( m => m.AvatarPage)
+  },
+  {
     path: '',
     redirectTo: 'inicio',
     pathMatch: 'full',
