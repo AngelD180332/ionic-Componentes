@@ -13,7 +13,7 @@ import {
 } from '@ionic/angular/standalone';
 import { RouterLinkActive, Router } from "@angular/router";
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, albumsOutline } from 'ionicons/icons';
+import { alertCircleOutline, albumsOutline, personCircleOutline } from 'ionicons/icons';
 
 interface Componente {
   icon: string;
@@ -48,7 +48,7 @@ export class inicioPage {
 
   constructor(private router: Router) {
     // Registrar todos los iconos que se usarán
-    addIcons({ alertCircleOutline, albumsOutline });
+    addIcons({ alertCircleOutline, albumsOutline, personCircleOutline });
   }
 
   // Método para probar que el botón funciona
