@@ -24,4 +24,8 @@ export const routes: Routes = [
     redirectTo: 'inicio',
     pathMatch: 'full',
   },
+  {
+    path: 'button',
+    loadComponent: () => import('./pages/button/button.page').then( m => m.ButtonPage)
+  },
 ];

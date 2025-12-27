@@ -13,7 +13,7 @@ import {
 } from '@ionic/angular/standalone';
 import { RouterLinkActive, Router } from "@angular/router";
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, albumsOutline, personCircleOutline } from 'ionicons/icons';
+import { alertCircleOutline, albumsOutline, personCircleOutline, squareOutline } from 'ionicons/icons';
 
 interface Componente {
   icon: string;
@@ -44,11 +44,12 @@ export class inicioPage {
     { icon: 'alert-circle-outline', name: 'Alert', redirectTo: '/alert' },
     { icon: 'albums-outline', name: 'Action Sheet', redirectTo: '/action-sheet' },
     { icon: 'person-circle-outline', name: 'Avatar', redirectTo: '/avatar' },
+    { icon: 'square-outline', name: 'Button', redirectTo: '/button' },
   ];
 
   constructor(private router: Router) {
     // Registrar todos los iconos que se usarán
-    addIcons({ alertCircleOutline, albumsOutline, personCircleOutline });
+    addIcons({ alertCircleOutline, albumsOutline, personCircleOutline, squareOutline });
   }
 
   // Método para probar que el botón funciona
@@ -76,6 +77,13 @@ export class inicioPage {
   goToAvatar() {
     console.log('Intentando navegar a /avatar');
     this.router.navigate(['/avatar']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
+  goToButton() {
+    console.log('Intentando navegar a /button');
+    this.router.navigate(['/button']).then(
       success => console.log('Navegación exitosa:', success),
       error => console.error('Error de navegación:', error)
     );

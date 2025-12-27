@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonAccordion, IonAvatar, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonAccordion, IonAvatar, IonButton, IonImg, IonButtons, IonChip, IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
 import { HeaderComponent } from "../../components/header/header.component";
 import { IonicModule } from "@ionic/angular"; // ← Importar directamente
 
@@ -18,7 +18,13 @@ import { IonicModule } from "@ionic/angular"; // ← Importar directamente
     FormsModule,
     HeaderComponent,
     IonAccordion,
-    IonAvatar, IonicModule]
+    IonAvatar,
+    IonImg,
+    IonButton, IonButtons, IonChip,
+    IonList,
+    IonItem,
+    IonLabel,
+  ]
 })
 export class AvatarPage implements OnInit {
 
