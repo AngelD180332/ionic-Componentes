@@ -32,4 +32,16 @@ export const routes: Routes = [
     path: 'card',
     loadComponent: () => import('./pages/card/card.page').then( m => m.CardPage)
   },
+  {
+    path: 'checkbox',
+    loadComponent: () => import('./pages/checkbox/checkbox.page').then( m => m.CheckboxPage)
+  },
+  {
+    path: 'datetime',
+    loadComponent: () => import('./pages/datetime/datetime.page').then( m => m.DatetimePage)
+  },
+  {
+    path: 'fab',
+    loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
+  },
 ];

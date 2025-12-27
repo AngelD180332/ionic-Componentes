@@ -13,7 +13,15 @@ import {
 } from '@ionic/angular/standalone';
 import { RouterLinkActive, Router } from "@angular/router";
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, albumsOutline, personCircleOutline, squareOutline,cardOutline } from 'ionicons/icons';
+import { alertCircleOutline, 
+        albumsOutline, 
+        personCircleOutline, 
+        squareOutline,
+        cardOutline,
+        checkboxOutline,
+        calendarOutline,
+        carOutline,
+       } from 'ionicons/icons';
 
 interface Componente {
   icon: string;
@@ -45,12 +53,24 @@ export class inicioPage {
     { icon: 'albums-outline', name: 'Action Sheet', redirectTo: '/action-sheet' },
     { icon: 'person-circle-outline', name: 'Avatar', redirectTo: '/avatar' },
     { icon: 'square-outline', name: 'Button', redirectTo: '/button' },
-    { icon: 'card-outline', name: 'Card', redirectTo: '/card' }
+    { icon: 'card-outline', name: 'Card', redirectTo: '/card' },
+    { icon: 'checkbox-outline', name: 'Checkbox', redirectTo: '/checkbox' },
+    { icon: 'calendar-outline', name: 'Datetime', redirectTo: '/datetime' },
+    { icon: 'car-outline', name: 'Fab', redirectTo: '/fab' },
+
   ];
 
   constructor(private router: Router) {
     // Registrar todos los iconos que se usarán
-    addIcons({ alertCircleOutline, albumsOutline, personCircleOutline, squareOutline, cardOutline });
+    addIcons({ alertCircleOutline, 
+              albumsOutline, 
+              personCircleOutline, 
+              squareOutline, 
+              cardOutline, 
+              checkboxOutline, 
+              calendarOutline,
+              carOutline,
+            });
   }
 
   // Método para probar que el botón funciona
@@ -92,6 +112,28 @@ export class inicioPage {
   goToCard() {
     console.log('Intentando navegar a /card');
     this.router.navigate(['/card']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
+  goToCheckbox() {
+    console.log('Intentando navegar a /checkbox');
+    this.router.navigate(['/checkbox']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
+  goToDatetime() {
+    console.log('Intentando navegar a /datetime');
+    this.router.navigate(['/datetime']).then(
+      success => console.log('Navegación exitosa:', success),
+      error => console.error('Error de navegación:', error)
+    );
+  }
+
+  goToFab() {
+    console.log('Intentando navegar a /fab');
+    this.router.navigate(['/fab']).then(
       success => console.log('Navegación exitosa:', success),
       error => console.error('Error de navegación:', error)
     );
