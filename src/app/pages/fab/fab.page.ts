@@ -6,7 +6,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 import { IonList, IonItem, IonLabel } from "@ionic/angular/standalone";
 import { IonFabButton, IonIcon, IonFabList } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { addOutline, logoIonic, logoAngular } from 'ionicons/icons';
+import { addOutline, logoIonic, logoAngular,logoYoutube,logoTwitter,logoGithub } from 'ionicons/icons';
 
 @Component({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -37,7 +37,7 @@ export class FabPage implements OnInit {
   data = Array(100);
 
   constructor() {
-    addIcons({ addOutline, logoIonic, logoAngular });
+    addIcons({ addOutline, logoIonic, logoAngular, logoYoutube, logoTwitter, logoGithub });
   }
 
   ngOnInit() {

@@ -44,4 +44,68 @@ export const routes: Routes = [
     path: 'fab',
     loadComponent: () => import('./pages/fab/fab.page').then( m => m.FabPage)
   },
+  {
+    path: 'grid',
+    loadComponent: () => import('./pages/grid/grid.page').then( m => m.GridPage)
+  },
+  {
+    path: 'infinite-scroll',
+    loadComponent: () => import('./pages/infinite-scroll/infinite-scroll.page').then( m => m.InfiniteScrollPage)
+  },
+  {
+    path: 'input',
+    loadComponent: () => import('./pages/input/input.page').then( m => m.InputPage)
+  },
+  {
+    path: 'list',
+    loadComponent: () => import('./pages/list/list.page').then( m => m.ListPage)
+  },
+  {
+    path: 'list-reorder',
+    loadComponent: () => import('./pages/list-reorder/list-reorder.page').then( m => m.ListReorderPage)
+  },
+  {
+    path: 'loading',
+    loadComponent: () => import('./pages/loading/loading.page').then( m => m.LoadingPage)
+  },
+  {
+    path: 'menu',
+    loadComponent: () => import('./pages/menu/menu.page').then( m => m.MenuPage)
+  },
+  {
+    path: 'modal',
+    loadComponent: () => import('./pages/modal/modal.page').then( m => m.ModalPage)
+  },
+  {
+    path: 'popover',
+    loadComponent: () => import('./pages/popover/popover.page').then( m => m.PopoverPage)
+  },
+  {
+    path: 'progress',
+    loadComponent: () => import('./pages/progress/progress.page').then( m => m.ProgressPage)
+  },
+  {
+    path: 'refresher',
+    loadComponent: () => import('./pages/refresher/refresher.page').then( m => m.RefresherPage)
+  },
+  {
+    path: 'search-bar',
+    loadComponent: () => import('./pages/search-bar/search-bar.page').then( m => m.SearchBarPage)
+  },
+  {
+    path: 'segment',
+    loadComponent: () => import('./pages/segment/segment.page').then( m => m.SegmentPage)
+  },
+  {
+    path: 'slides',
+    loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
+  {
+    path: 'tabs',
+    loadComponent: () => import('./pages/tabs/tabs.page').then( m => m.TabsPage)
+  },
+  {
+    path: 'toast',
+    loadComponent: () => import('./pages/toast/toast.page').then( m => m.ToastPage)
+  },
 ];
