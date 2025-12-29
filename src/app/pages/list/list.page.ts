@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { HeaderComponent } from 'src/app/components/header/header.component';
-import { DataService } from 'services/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 
 
