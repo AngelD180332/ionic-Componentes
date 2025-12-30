@@ -36,6 +36,9 @@ import { alertCircleOutline,
         codeWorkingOutline,
         chevronUpOutline
        } from 'ionicons/icons';
+import { MenuController, IonMenuButton } from '@ionic/angular'
+
+
 
 interface Componente {
   icon: string;
@@ -50,16 +53,17 @@ interface Componente {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
-    IonHeader, 
-    IonToolbar, 
-    IonTitle, 
-    IonContent, 
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
     IonButton,
     IonRouterLink,
     RouterLinkActive,
     IonList,
-    IonItem
-  ],
+    IonItem,
+
+],
 })
 export class inicioPage {
   componentes: Componente[] = [
@@ -90,7 +94,7 @@ export class inicioPage {
 
   ];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private menuCtrl: MenuController) {
     // Registrar todos los iconos que se usarán
     addIcons({ alertCircleOutline, 
               albumsOutline, 
@@ -116,6 +120,11 @@ export class inicioPage {
               chevronUpOutline
             });
   }
+
+  mostrarMenu(){
+    this.menuCtrl.open('first');
+  }
+
 
   // Método para probar que el botón funciona
   testClick() {

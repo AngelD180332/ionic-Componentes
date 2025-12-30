@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-loading',
@@ -12,7 +13,8 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
   imports: [IonContent, 
             IonHeader, 
             IonTitle, 
-            IonToolbar, 
+            IonToolbar,
+            IonButton, 
             CommonModule, 
             FormsModule,
             HeaderComponent,
@@ -20,9 +22,28 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 })
 export class LoadingPage implements OnInit {
 
-  constructor() { }
+  loading!: HTMLIonLoadingElement;
+
+  constructor( private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
   }
+
+  mostrarLoading(){
+    this.presentLoading('Cargando...');
+
+    setTimeout(() =>{
+      this.loading.dismiss();
+    }, 2000)
+  }
+
+  async presentLoading( message: string){
+    this.loading = await this.loadingCtrl.create({
+      message,
+    });
+    await this.loading.present();
+
+  }
+
 
 }
