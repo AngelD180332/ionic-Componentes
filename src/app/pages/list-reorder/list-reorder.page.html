@@ -1,6 +1,22 @@
-<app-header [titulo]="'List Reorder'"></app-header>
-
+<ion-toolbar>
+    <app-header [titulo]="'List Reorder'"></app-header>
+    <!--Boton-->
+    <ion-buttons slot="end">
+        <ion-button (click)="reorderDisabled= !reorderDisabled">
+            Toggle
+        </ion-button>
+    </ion-buttons>
+</ion-toolbar>
 
 <ion-content [fullscreen]="true">
+    <ion-list>
+        <ion-reorder-group [disabled]="reorderDisabled"
+                            (ionItemReorder)="doReorder($event)">
+            <ion-item *ngFor="let personaje of personajes">
+                <ion-label>{{personaje}}</ion-label>
+                <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
 
+        </ion-reorder-group>
+    </ion-list>
 </ion-content>
