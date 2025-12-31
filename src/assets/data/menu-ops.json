@@ -1,0 +1,117 @@
+[
+  {
+    "icon": "alert-circle-outline",
+    "name": "Alert",
+    "redirectTo": "/alert"
+  },
+  {
+    "icon": "albums-outline",
+    "name": "Action Sheet",
+    "redirectTo": "/action-sheet"
+  },
+  {
+    "icon": "person-circle-outline",
+    "name": "Avatar",
+    "redirectTo": "/avatar"
+  },
+  {
+    "icon": "square-outline",
+    "name": "Button",
+    "redirectTo": "/button"
+  },
+  {
+    "icon": "card-outline",
+    "name": "Card",
+    "redirectTo": "/card"
+  },
+  {
+    "icon": "checkbox-outline",
+    "name": "Checkbox",
+    "redirectTo": "/checkbox"
+  },
+  {
+    "icon": "calendar-outline",
+    "name": "Datetime",
+    "redirectTo": "/datetime"
+  },
+  {
+    "icon": "car-outline",
+    "name": "Fab",
+    "redirectTo": "/fab"
+  },
+  {
+    "icon": "grid-outline",
+    "name": "Grid",
+    "redirectTo": "/grid"
+  },
+  {
+    "icon": "infinite-outline",
+    "name": "Infinite Scroll",
+    "redirectTo": "/infinite-scroll"
+  },
+  {
+    "icon": "enter-outline",
+    "name": "Input",
+    "redirectTo": "/input"
+  },
+  {
+    "icon": "list-outline",
+    "name": "List",
+    "redirectTo": "/list"
+  },
+  {
+    "icon": "list-outline",
+    "name": "List Reorder",
+    "redirectTo": "/list-reorder"
+  },
+  {
+    "icon": "ellipsis-horizontal-circle-outline",
+    "name": "Loading",
+    "redirectTo": "/loading"
+  },
+  {
+    "icon": "arrow-up-outline",
+    "name": "Modal",
+    "redirectTo": "/modal"
+  },
+  {
+    "icon": "tablet-landscape-outline",
+    "name": "Popover",
+    "redirectTo": "/popover"
+  },
+  {
+    "icon": "remove-outline",
+    "name": "Progress",
+    "redirectTo": "/progress"
+  },
+  {
+    "icon": "refresh-outline",
+    "name": "Refresher",
+    "redirectTo": "/refresher"
+  },
+  {
+    "icon": "search-outline",
+    "name": "Search Bar",
+    "redirectTo": "/search-bar"
+  },
+  {
+    "icon": "browsers-outline",
+    "name": "Segment",
+    "redirectTo": "/segment"
+  },
+  {
+    "icon": "albums-outline",
+    "name": "Slides",
+    "redirectTo": "/slides"
+  },
+  {
+    "icon": "code-working-outline",
+    "name": "Tabs",
+    "redirectTo": "/tabs"
+  },
+  {
+    "icon": "chevron-up-outline",
+    "name": "Toast",
+    "redirectTo": "/toast"
+  }
+]

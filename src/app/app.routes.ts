@@ -69,10 +69,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/loading/loading.page').then( m => m.LoadingPage)
   },
   {
-    path: 'menu',
-    loadComponent: () => import('./pages/menu/menu.page').then( m => m.MenuPage)
-  },
-  {
     path: 'modal',
     loadComponent: () => import('./pages/modal/modal.page').then( m => m.ModalPage)
   },
@@ -107,5 +103,9 @@ export const routes: Routes = [
   {
     path: 'toast',
     loadComponent: () => import('./pages/toast/toast.page').then( m => m.ToastPage)
+  },
+  {
+    path: 'modal-info',
+    loadComponent: () => import('./pages/modal-info/modal-info.page').then( m => m.ModalInfoPage)
   },
 ];
