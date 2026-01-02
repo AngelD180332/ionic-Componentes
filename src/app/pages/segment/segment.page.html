@@ -5,8 +5,8 @@
         </ion-buttons>
         <ion-title>Segment</ion-title>
     </ion-toolbar>
-    <ion-segment value="todos" (ionChange)="segmentChanged($event)">
-        <ion-segment-button value="todos">
+    <ion-segment value="" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="">
             <ion-label>Todos</ion-label>
         </ion-segment-button>
         <ion-segment-button value="DC Comics">
@@ -65,7 +65,7 @@
 
 
     <ion-list>
-        <ion-item *ngFor="let heroe of superHeroes | async">
+        <ion-item *ngFor="let heroe of (superHeroes | async) | filtro:publisher:'publisher' ">
             <ion-label>
                 <h3> {{heroe.superheroe}} <small> {{heroe.alter_ego}} </small> </h3>
                 <p> {{heroe.first_appearance}} </p>

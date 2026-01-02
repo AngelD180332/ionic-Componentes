@@ -6,6 +6,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 import { IonSegment, IonSegmentButton, IonLabel, IonList, IonItem} from '@ionic/angular/standalone';
 import { IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
+import { FiltroPipe } from 'src/app/pipes/filtro-pipe-module';
 
 import {
   home,
@@ -41,12 +42,14 @@ import { Observable } from 'rxjs';
     IonBackButton,
     IonButtons,
     IonList,
-    IonItem
+    IonItem,
+    FiltroPipe
   ]
 })
 export class SegmentPage implements OnInit {
 
   superHeroes!: Observable<any>;
+  publisher: string = 'todos';
 
   constructor(private dataService: DataService) { 
         addIcons({
@@ -67,8 +70,15 @@ export class SegmentPage implements OnInit {
     this.superHeroes = this.dataService.getHeroes();
   }
 
-  segmentChanged( event:any ){
-    console.log(event)
-  }
+segmentChanged(event: any) {
+
+  //if (event.detail.value === 'todos') {
+  //  this.publisher = '';
+  //} else {
+    this.publisher = event.detail.value;
+  //}
+
+}
+
 
 }
