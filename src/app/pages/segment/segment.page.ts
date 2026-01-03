@@ -22,7 +22,7 @@ import {
 } from 'ionicons/icons';
 import { DataService } from 'src/app/services/data.service';
 import { Observable } from 'rxjs';
-
+import { IonSkeletonText } from '@ionic/angular/standalone'; 
 @Component({
   selector: 'app-segment',
   templateUrl: './segment.page.html',
@@ -43,16 +43,18 @@ import { Observable } from 'rxjs';
     IonButtons,
     IonList,
     IonItem,
-    FiltroPipe
+    FiltroPipe, 
+    IonSkeletonText
+  
   ]
 })
 export class SegmentPage implements OnInit {
 
   superHeroes!: Observable<any>;
-  publisher: string = 'todos';
+  publisher: string = ''; // Inicializado vacío para mostrar todos
 
   constructor(private dataService: DataService) { 
-        addIcons({
+    addIcons({
       home,
       heart,
       pin,
@@ -64,21 +66,15 @@ export class SegmentPage implements OnInit {
       trash,
       person
     });
-   }
+  }
 
   ngOnInit() {
     this.superHeroes = this.dataService.getHeroes();
   }
 
-segmentChanged(event: any) {
-
-  //if (event.detail.value === 'todos') {
-  //  this.publisher = '';
-  //} else {
+  segmentChanged(event: any) {
     this.publisher = event.detail.value;
-  //}
-
-}
-
+    console.log('Publisher seleccionado:', this.publisher);
+  }
 
 }
