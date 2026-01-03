@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { TabsPage } from './pages/tabs/tabs.page';
 
 export const routes: Routes = [
   {
@@ -108,4 +109,10 @@ export const routes: Routes = [
     path: 'modal-info',
     loadComponent: () => import('./pages/modal-info/modal-info.page').then( m => m.ModalInfoPage)
   },
+  {
+    path: 'account',
+    loadComponent: () => import('./pages/avatar/avatar.page').then( m => m.AvatarPage)
+  },
+
+
 ];
